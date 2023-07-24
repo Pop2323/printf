@@ -22,7 +22,7 @@ int printf_rev(va_list args, int params)
 	for (i = len - 1; i >= 0; i--)
 	{
 		_putchar(str[i]);
-		printed++;
+		params++;
 	}
-	return (printed);
+	return (params);
 }

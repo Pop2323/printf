@@ -16,7 +16,7 @@ int flags(const char *format, va_list args, int params)
 	{
 		case 'd':
 		case 'i':
-			params = printf_integer(args, params);
+			params = printf_int(args, params);
 			break;
 		case 'c':
 			_putchar(va_arg(args, int));
