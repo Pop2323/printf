@@ -12,33 +12,44 @@
 
 int flags(const char *format, va_list args, int params)
 {
-	if (*format == 'd' || *format == 'i')
-{
-	params = printf_int(args, params);
-}
-else if (*format == 'c')
-	_putchar(va_arg(args, int));
-	params++;
-else if (*format == 's')
-	params = printf_str(args, params);
-else if (*format == '%')
-	_putchar('%');
-	params++;
-else if (*format == 'b')
-	params = printf_binary(va_arg(args, unsigned int), params);
-else if (*format == 'x' || *format == 'X')
-	params = _h(va_arg(args, unsigned int), params, (*format == 'X') ? 1 : 0);
-else if (*format == 'o')
-	params = printf_octal(va_arg(args, unsigned int), params);
-else if (*format == 'u')
-	params = printf_unsigned(va_arg(args, unsigned int), printed);
-else if (*format == 'r')
-	params = printf_rev(args, params);
-else if (*format == 'p')
-	params = printf_ptr(args, params);
-else
-{
-
-}
-return (params);
+	switch (*format)
+	{
+		case 'd':
+		case 'i':
+			params = printf_integer(args, params);
+			break;
+		case 'c':
+			_putchar(va_arg(args, int));
+			params++;
+			break;
+		case 's':
+			params = printf_str(args, params);
+			break;
+		case '%':
+			_putchar('%');
+			params++;
+			break;
+		case 'b':
+			params = printf_binary(va_arg(args, unsigned int), params);
+			break;
+		case 'x':
+		case 'X':
+			params = _h(va_arg(args, unsigned int), params, (*format == 'X') ? 1 : 0);
+			break;
+		case 'o':
+			params = printf_octal(va_arg(args, unsigned int), params);
+			break;
+		case 'u':
+			params = printf_unsigned(va_arg(args, unsigned int), params);
+			break;
+		case 'r':
+			params = printf_rev(args, params);
+			break;
+		case 'p':
+			params = printf_ptr(args, params);
+			break;
+		default:
+			break;
+	}
+	return (params);
 }
