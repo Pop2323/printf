@@ -15,19 +15,21 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-for (; *format != '\0'; format++)
-{
-	if (*format == '%')
+	while (*format != '\0')
 	{
-		format++;
-		params = flags(format, args, params);
+		if (*format == '%')
+		{
+			format++;
+			params = flags(format, args, params);
+			format++;
+		}
+		else
+		{
+			_putchar(*format);
+			params++;
+			format++;
+		}
 	}
-	else
-	{
-		_putchar(*format);
-		params++;
-	}
-}
-va_end (args);
-return (params);
+	va_end(args);
+	return (params);
 }
