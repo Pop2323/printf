@@ -11,15 +11,18 @@
 
 int printf_rev(va_list args, int params)
 {
-	int len, i;
+	int len = 0, i;
 
 	char *str = va_arg(args, char *);
 
-	for (len = 0; str[len]; len++)
-		;
+	while (str[len])
+	{
+		len++;
+	}
 	for (i = len - 1; i >= 0; i--)
 	{
 		_putchar(str[i]);
-		params++;
+		printed++;
 	}
+	return (printed);
 }
