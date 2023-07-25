@@ -61,26 +61,15 @@ char *converter(unsigned long int num, int base, int lower)
 	static char buffer[50];
 	char *ptr;
 
-	if (lower)
-	{
-		resualt = "0123456789abcdef";
-	}
-	else
-	{
-		resualt = "0123456789ABCDEF";
-	}
-
+	resualt = (lower)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";
 	ptr = &buffer[49];
-	*ptr = '\0';
+	*ptr = NUL;
+	do {
+		*--ptr = resualt[num % base];
+		num /= base;
+	} while (num);
 
-	for (; num != 0; num /= base)
-	{
-		*--ptr = result[num % base];
-	}
-
-	if (ptr == &buffer[49])
-	{
-		*--ptr = '0';
-	}
 	return (ptr);
 }
