@@ -14,17 +14,6 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"d", print_int},
 		{"i", print_int},
-		{"c", print_char},
-		{"s", print_str},
-		{"u", print_unsigned_integer},
-		{"b", print_binary},
-		{"o", print_octal},
-		{"x", print_hex},
-		{"X", print_HEX},
-		{"S", print_Str},
-		{"p", print_ptr},
-		{"r", print_rev},
-		{"R", print_rot13},
 		{NULL, NULL},
 	};
 	va_list args;
