@@ -94,7 +94,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- * hex_checker - Checks which hex function is calling it
+ * hex_check - Checks which hex function is calling it
  *
  * @num: convert leeter num
  * @x: check which hex func will run
