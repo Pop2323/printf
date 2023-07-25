@@ -30,6 +30,7 @@ int formater(const char *format, flags_t flags_list[], va_list args);
 int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
+int print_ptr(va_list ptr);
 int print_rev(va_list op);
 int print_rot13(va_list arg);
 #endif
