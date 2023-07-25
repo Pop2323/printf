@@ -15,13 +15,13 @@ int print_Str(va_list arg)
 	char *res, *s = va_arg(arg, char *);
 
 	if (!s)
-		return (_puts(NULL_STRING));
+		return (_puts(NULL_STR));
 	for (; *s; s++)
 	{
 		if (checker(*s))
 		{
 			calc = calc + _puts("\\x");
-			res = converter((unsigned long int)*s, 16, 0);
+			res = flags(*s, 16, 0);
 			if (!res[1])
 				len += _putchar('0');
 			len += _puts(res);
@@ -46,7 +46,7 @@ int checker(char c)
 }
 
 /**
- * converter - func that turn on the data to str
+ * flags - func that turn on the data to str
  *
  * @num: the number value
  * @base: the base vaule
@@ -55,7 +55,7 @@ int checker(char c)
  * Return: return the res of the str
  */
 
-char *converter(unsigned long int num, int base, int lower)
+char *flags(unsigned long int num, int base, int lower)
 {
 	static char *resualt;
 	static char buffer[50];

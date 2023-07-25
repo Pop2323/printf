@@ -7,7 +7,7 @@
 #include <stdarg.h>
 #include <limits.h>
 
-#define NULL_STRING "(null)"
+#define NULL_STR "(null)"
 #define NUL '\0'
 
 /**
@@ -34,7 +34,7 @@ int print_ptr(va_list ptr);
 int hex_checker(unsigned long int n);
 int print_Str(va_list arg);
 int checker(char c);
-char *converter(unsigned long int num, int base, int lower);
+char *flags(unsigned long int num, int base, int lower);
 int print_rev(va_list op);
 int print_rot13(va_list arg);
 #endif
