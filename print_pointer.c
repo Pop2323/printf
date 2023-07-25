@@ -13,7 +13,8 @@ int print_ptr(va_list ptr)
 	void *v;
 	char *n = "(nil)";
 	long int a;
-	int j, i;
+	int j;
+	int i;
 
 	v = va_arg(ptr, void*);
 	if (v == NULL)
