@@ -31,6 +31,7 @@ int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
 int print_ptr(va_list ptr);
+int hex_checker(unsigned long int n);
 int print_rev(va_list op);
 int print_rot13(va_list arg);
 #endif
