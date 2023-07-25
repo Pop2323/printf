@@ -3,15 +3,15 @@
 /**
  * print_Str - func that print the Str
  *
- * @arg: list of arg
+ * @ap: list of arg
  *
  * Return: the length of the string
  */
 
-int print_Str(va_list arg)
+int print_Str(va_list ap)
 {
 	register short len = 0;
-	char *res, *s = va_arg(arg, char *);
+	char *res, *s = va_arg(ap, char *);
 	int calc;
 
 	if (!s)
@@ -20,7 +20,7 @@ int print_Str(va_list arg)
 	{
 		if (checker(*s))
 		{
-			calc = calc + _puts("\\x");
+			calc += _puts("\\x");
 			res = flags(*s, 16, 0);
 			if (!res[1])
 				len += _putchar('0');
