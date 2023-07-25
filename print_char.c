@@ -3,13 +3,13 @@
 /**
  * print_char - func that will print char
  *
- * @args: list of args
+ * @arg: list of args
  *
  * Return: return the printed char
  */
 
-int print_char(va_list args)
+int print_char(va_list arg)
 {
-	_putchar(va_arg(args, int));
+	_putchar(va_arg(arg, int));
 	return (1);
 }

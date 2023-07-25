@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	flags_t flags_list[] = {
 		{"%", print_percent},
 		{"c", print_char},
-		{"s", print_string},
+		{"s", print_str},
 		{NULL, NULL},
 	};
 	va_list args;
