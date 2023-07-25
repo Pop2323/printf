@@ -12,28 +12,28 @@ int print_hex_checker(unsigned long int num)
 {
 	long int i;
 	long int *arr;
-	long int calc = 0;
+	long int sum = 0;
 	unsigned long int temp = num;
 
 	while (num / 16 != 0)
 	{
 		num /= 16;
-		calc++;
+		sum++;
 	}
-	calc++;
-	arr = malloc(calc * sizeof(long int));
+	sum++;
+	arr = malloc(sum * sizeof(long int));
 
-	for (i = 0; i < calc; i++)
+	for (i = 0; i < sum; i++)
 	{
 		arr[i] = temp % 16;
 		temp /= 16;
 	}
-	for (i = calc - 1; i >= 0; i--)
+	for (i = sum - 1; i >= 0; i--)
 	{
 		if (arr[i] > 9)
 			arr[i] = arr[i] + 39;
 		_putchar(arr[i] + '0');
 	}
 	free(arr);
-	return (calc);
+	return (sum);
 }
