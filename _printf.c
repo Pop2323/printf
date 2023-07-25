@@ -11,6 +11,9 @@ int _printf(const char *format, ...)
 {
 	int printed_chars;
 	flags_t flags_list[] = {
+		{"%", print_percent},
+		{"c", print_char},
+		{"s", print_string},
 		{NULL, NULL},
 	};
 	va_list args;
