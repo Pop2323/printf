@@ -10,13 +10,19 @@
 int _printf(const char *format, ...)
 {
 	int printed_chars;
+	flags_t flags_list[] = {
+		{"%", print_percent},
+		{"d", print_int},
+		{"i", print_int},
+		{NULL, NULL},
+	};
 	va_list args;
 
 	if (format == NULL)
 		return (-1);
 
 	va_start(args, format);
-	printed_chars = formater(format, args);
+	printed_chars = formater(format, flags_list, args);
 	va_end(args);
 
 	return (printed_chars);

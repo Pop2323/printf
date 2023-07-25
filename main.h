@@ -26,8 +26,9 @@ typedef struct flags flags_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int formater(const char *format, flags_t flags_list[], va_list args);
 int print_char(va_list args);
 int print_str(va_list args);
+int print_int(va_list);
 int print_percent(va_list args);
-int formater(const char *format, va_list args);
 #endif
