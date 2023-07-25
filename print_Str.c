@@ -11,8 +11,8 @@
 int print_Str(va_list arg)
 {
 	register short len = 0;
-	int calc;
 	char *res, *s = va_arg(arg, char *);
+	int calc;
 
 	if (!s)
 		return (_puts(NULL_STR));
