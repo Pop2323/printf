@@ -21,13 +21,13 @@ int print_Str(va_list arg)
 		if (checker(*s))
 		{
 			calc = calc + _puts("\\x");
-			res = converter(*s, 16, 0);
+			res = converter((unsigned long int)*s, 16, 0);
 			if (!res[1])
-				len = len + _putchar('0');
-			len = len + _puts(res);
+				len += _putchar('0');
+			len += _puts(res);
 		}
 		else
-			len = len + _putchar(*s);
+			len += _putchar(*s);
 	}
 	return (len);
 }
