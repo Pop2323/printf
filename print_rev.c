@@ -3,22 +3,22 @@
 /**
  * print_rev - func that print the str in revesr
  *
- * @rev: list of args
+ * @op: list of args
  *
  * Return: return len of the rev str
 */
 
 
-int print_rev(va_list rev)
+int print_rev(va_list op)
 {
 	int i, j;
-	char *str = va_arg(rev, char *);
+	char *s = va_arg(op, char *);
 
-	if (!str)
-		str = "(null)";
+	if (!s)
+		ss = "(null)";
 	for (i = 0; s[i]; i++)
 		;
 	for (j = i - 1; j >= 0; j--)
-		_putchar(str[j]);
+		_putchar(s[j]);
 	return (i);
 }
