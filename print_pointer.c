@@ -16,7 +16,7 @@ int print_ptr(va_list ap)
 	int j;
 	int i;
 
-	v = va_arg(ptr, void*);
+	v = va_arg(ap, void*);
 	if (v == NULL)
 	{
 		for (i = 0; n[i] != '\0'; i++)
