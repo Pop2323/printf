@@ -101,7 +101,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  *
  * Return: return the ascii value
  */
-int hex_checker(int num, char x)
+int hex_check(int num, char x)
 {
 	char *hex = "abcdef";
 	char *Hex = "ABCDEF";
