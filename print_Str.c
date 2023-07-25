@@ -12,7 +12,7 @@ int print_Str(va_list ap)
 {
 	register short len = 0;
 	char *res, *s = va_arg(ap, char *);
-	int calc;
+	int calc = 0;
 
 	if (!s)
 		return (_puts(NULL_STR));

@@ -33,7 +33,7 @@ int print_str(va_list);
 int print_percent(va_list);
 int print_ptr(va_list ptr);
 int hex_checker(unsigned long int n);
-int print_Str(va_list arg);
+int print_Str(va_list ap);
 int print_hex_checker(unsigned long int num);
 char *flags(unsigned long int num, int base, int lower);
 unsigned int _len(unsigned int num, int base);
