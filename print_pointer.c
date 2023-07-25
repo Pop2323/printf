@@ -8,7 +8,7 @@
  * Return: return the hex num
  */
 
-int print_ptr(va_list ptr)
+int print_ptr(va_list ap)
 {
 	void *v;
 	char *n = "(nil)";

@@ -57,17 +57,17 @@ int checker(char c)
 
 char *flags(unsigned long int num, int base, int lower)
 {
-	static char *resualt;
+	static char *result;
 	static char buffer[50];
 	char *ptr;
 
-	resualt = (lower)
+	result = (lower)
 		? "0123456789abcdef"
 		: "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = NUL;
 	do {
-		*--ptr = resualt[num % base];
+		*--ptr = result[num % base];
 		num /= base;
 	} while (num);
 
