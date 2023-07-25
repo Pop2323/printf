@@ -73,10 +73,9 @@ char *converter(unsigned long int num, int base, int lower)
 	ptr = &buffer[49];
 	*ptr = '\0';
 
-	while (num != 0)
+	for (; num != 0; num /= base)
 	{
-		*--ptr = resualt[num % base];
-		num /= base;
+		*--ptr = result[num % base];
 	}
 
 	if (ptr == &buffer[49])
